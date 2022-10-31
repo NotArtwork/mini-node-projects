@@ -4,7 +4,8 @@
 const {john, peter} = require('./name');
 const sayHi = require('./utils')
 const data = require('./alternative-flavors')
-console.log(data)
+require('./mind-grenade')
+// console.log(data)
 
 sayHi('Antonio')
 sayHi(peter)
