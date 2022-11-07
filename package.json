@@ -1,0 +1,19 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "We tried",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NotArtwork/mini-node-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NotArtwork/mini-node-projects/issues"
+  },
+  "homepage": "https://github.com/NotArtwork/mini-node-projects#readme"
+}
