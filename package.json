@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/NotArtwork/mini-node-projects/issues"
   },
-  "homepage": "https://github.com/NotArtwork/mini-node-projects#readme"
+  "homepage": "https://github.com/NotArtwork/mini-node-projects#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "lodash": "^4.17.21"
+  }
 }
