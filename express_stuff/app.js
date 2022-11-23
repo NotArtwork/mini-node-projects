@@ -1,31 +1,31 @@
-const http = require('http')
-const { url } = require('inspector')
-const { readFileSync } = require('fs')
+const express = require('express')
+const app = express()
 
-const server = http.createServer((req, res) => {
+app.listen(5003, () => {
+    console.log('Server is listening on 5003')
+})
 
-    const url = req.url
+app.get('/', (req, res) => {
 
-    if (url === '/') {
-
-        res.writeHead(200, {'content-type' : 'text/html'})
-        console.log('User hit the server')
-        res.end('<h1> home page </h1>')
-
-    }
-    else if (url ==='/about') {
-
-        res.writeHead(200, { 'content-type': 'text/html' })
-        console.log('User hit the server')
-        res.end('<h1> About Page </h1>')
-
-    }
-    else {
-        res.writeHead(404, { 'content-type': 'text/html' })
-        console.log('User hit the server')
-        res.end('<h1> Page not found! </h1>')
-    }
+    res.status(200).send('Home Page')
 
 })
 
-server.listen(5001)
+app.get('/about', (req, res) => {
+    res.status(200).send('About Page')
+})
+
+app.all('*', (req, res) => {
+    res.status(404).send('<h1> Resource not found </h1>')
+})
+
+// App verbs
+// app.get
+// app.post
+// app.put
+// app.delete
+// app.all
+
+// Responsible for middleware
+// app.use
+// app.listen
