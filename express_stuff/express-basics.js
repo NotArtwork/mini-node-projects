@@ -1,20 +1,23 @@
+
 const express = require('express')
-const path = require('path')
 const app = express()
 
-app.use(express.static('./public'))
+app.listen(5003, () => {
+    console.log('Server is listening on 5003')
+})
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, './index.html'))
-//     adding to static assets
-//     SSR
-// })
+app.get('/', (req, res) => {
+
+    res.status(200).send('Home Page')
+
+})
+
+app.get('/about', (req, res) => {
+    res.status(200).send('About Page')
+})
 
 app.all('*', (req, res) => {
-    res.status(404).send('resource not found')
+    res.status(404).send('<h1> Resource not found </h1>')
 })
 
-app.listen(5003, () => {
-    console.log('Server is listening on port 5003..')
-})
 
