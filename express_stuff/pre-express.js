@@ -8,12 +8,12 @@ const server = http.createServer((req, res) => {
 
     if (url === '/') {
 
-        res.writeHead(200, {'content-type' : 'text/html'})
+        res.writeHead(200, { 'content-type': 'text/html' })
         console.log('User hit the server')
         res.end('<h1> home page </h1>')
 
     }
-    else if (url ==='/about') {
+    else if (url === '/about') {
 
         res.writeHead(200, { 'content-type': 'text/html' })
         console.log('User hit the server')
